@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 public class CurrencyConverter {
-    public String apiKey;
     public String baseCurrency;
     public String currencies;
     public CurrencyConverter(String baseCurrency, String currencies) {
@@ -28,10 +27,8 @@ public class CurrencyConverter {
         while ((line = reader.readLine()) != null) {
             response.append(line);
         }
-
         reader.close();
         connection.disconnect();
-
         return response.toString();
     }
 }
